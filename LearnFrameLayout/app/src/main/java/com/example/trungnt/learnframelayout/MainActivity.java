@@ -1,5 +1,6 @@
 package com.example.trungnt.learnframelayout;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnShow, btnHide, btnClose, btnFullScreen, btnMiniature;
+    private Intent intentOpenAuthor, intentOpenWork;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        int id = v.getId();
 
+        if (id = R.id.btnClose)
+                            this.finish();
+
+        if (id = R.id.btnShow)
+                            showAllFrameLayout();
     }
 
     //dinh nghia phuong thuc khoi tao ViewMainActivity
@@ -39,5 +47,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnClose.setOnClickListener(this);
         btnFullScreen.setOnClickListener(this);
         btnMiniature.setOnClickListener(this);
+    }
+
+    private void showAllFrameLayout()
+    {
+        intentOpenAuthor = new Intent(MainActivity.this, AuthorActivity.class);
+        startActivity(intentOpenAuthor);
+
+        intentOpenWork = new Intent(MainActivity.this, WorkActivity.class);
+        startActivity(intentOpenWork);
     }
 }
