@@ -9,15 +9,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.trungnt.learnframelayout.MainActivity">
 
-    <Button
-        android:id="@+id/btnClose"
-        android:background="@drawable/close"
-        android:layout_gravity="end"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height" />
-    <Button
-        android:id="@+id/btnShow"
-        android:text="@string/label_button_show"
-        android:layout_width="@dimen/button_show_width"
-        android:layout_height="@dimen/button_show_heigth" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnClose"
+            android:background="@drawable/close"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
+        <Button
+            android:id="@+id/btnShow"
+            android:layout_alignParentBottom="true"
+            android:text="@string/label_button_show"
+            android:layout_width="@dimen/button_show_width"
+            android:layout_height="@dimen/button_show_heigth" />
+    </RelativeLayout>
 </FrameLayout>

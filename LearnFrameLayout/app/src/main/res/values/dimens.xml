@@ -6,4 +6,5 @@
     <dimen name="button_height">30dp</dimen>
     <dimen name="button_show_width">150dp</dimen>
     <dimen name="button_show_heigth">50dp</dimen>
+    <dimen name="button_show_marginTop">350dp</dimen>
 </resources>
