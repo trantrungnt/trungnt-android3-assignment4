@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorFrameLayoutAuthor">#FFFF00</color>
     <color name="colorFrameLayoutMain">#2962FF</color>
+    <color name="colorFrameLayoutWork">#FF9800</color>
 </resources>
