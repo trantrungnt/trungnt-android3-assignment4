@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         int id = v.getId();
 
-        if (id = R.id.btnClose)
+        if (id == R.id.btnClose)
                             this.finish();
 
-        if (id = R.id.btnShow)
+        if (id == R.id.btnShow)
                             showAllFrameLayout();
     }
 
@@ -51,10 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showAllFrameLayout()
     {
-        intentOpenAuthor = new Intent(MainActivity.this, AuthorActivity.class);
-        startActivity(intentOpenAuthor);
+        //intentOpenAuthor = new Intent(MainActivity.this, AuthorActivity.class);
+        //startActivity(intentOpenAuthor);
 
-        intentOpenWork = new Intent(MainActivity.this, WorkActivity.class);
+        intentOpenWork = new Intent(this, WorkActivity.class);
         startActivity(intentOpenWork);
     }
 }

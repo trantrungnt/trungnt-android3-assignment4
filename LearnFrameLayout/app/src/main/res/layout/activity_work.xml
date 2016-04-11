@@ -7,6 +7,7 @@
     android:background="@color/colorFrameLayoutWork"
     android:layout_width="@dimen/frame_layout_width"
     android:layout_height="@dimen/frame_layout_height"
+    android:layout_marginTop="@dimen/frame_layout_work_marginTop"
 >
 
     <RelativeLayout

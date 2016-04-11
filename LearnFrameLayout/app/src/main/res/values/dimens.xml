@@ -14,5 +14,7 @@
     <dimen name="image_view_activity_main_height">350dp</dimen>
     <dimen name="image_view_activity_main_marginBotton">30dp</dimen>
     <dimen name="frame_layout_width">300dp</dimen>
-    <dimen name="frame_layout_height">500dp</dimen>
+    <dimen name="frame_layout_height">350dp</dimen>
+    <dimen name="frame_layout_work_marginTop">160dp</dimen>
+    <dimen name="frame_layout_author_marginTop">80dp</dimen>
 </resources>
