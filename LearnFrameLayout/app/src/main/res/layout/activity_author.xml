@@ -37,7 +37,7 @@
         android:layout_height="@dimen/button_show_heigth" />
 
     <Button
-        android:id="@+id/btnHide"
+        android:id="@+id/btnHideAuthor"
         android:text="@string/label_button_hide"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/btnShowAuthor"

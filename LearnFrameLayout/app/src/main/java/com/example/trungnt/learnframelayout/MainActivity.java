@@ -9,8 +9,8 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnShowMain, btnHideMain, btnCloseMain, btnFullScreenMain, btnMiniatureMain;
-    private Button btnCloseMainAuthor;
-    private RelativeLayout relativeLayoutMain, relativeLayoutAuthor;
+    private Button btnCloseAuthor, btnCloseWork, btnShowWork, btnHideWork, btnShowAuthor, btnHideAuthor;
+    private RelativeLayout relativeLayoutMain, relativeLayoutAuthor, relativeLayoutWork;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +28,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (id == R.id.btnCloseMain)
                             relativeLayoutMain.setVisibility(View.GONE);
 
-        if (id == R.id.btnShowMain)
+        if (id == R.id.btnShowMain ||
+            id == R.id.btnShowAuthor ||
+            id == R.id.btnShowWork
+           )
                             showAllFrameLayout();
 
-        if (id == R.id.btnHideMain)
+        if (id == R.id.btnHideMain ||
+            id == R.id.btnHideAuthor ||
+            id == R.id.btnHideWork
+           )
                             hideAllFreamLayout();
 
-        if (id ==R.id.btnCloseAuthor)
+        if (id == R.id.btnCloseAuthor)
                             relativeLayoutAuthor.setVisibility(View.GONE);
+
+        if (id == R.id.btnCloseWork)
+                            relativeLayoutWork.setVisibility(View.GONE);
     }
 
     //dinh nghia phuong thuc khoi tao ViewMainActivity
@@ -49,8 +58,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         relativeLayoutMain = (RelativeLayout) this.findViewById(R.id.relativeLayoutMain);
         relativeLayoutAuthor = (RelativeLayout) this.findViewById(R.id.relativeLayoutAuthor);
+        relativeLayoutWork = (RelativeLayout) this.findViewById(R.id.relativeLayoutWork);
 
-        btnCloseMainAuthor = (Button) this.findViewById(R.id.btnCloseAuthor);
+        btnCloseAuthor = (Button) this.findViewById(R.id.btnCloseAuthor);
+        btnShowAuthor = (Button) this.findViewById(R.id.btnShowAuthor);
+        btnHideAuthor = (Button) this.findViewById(R.id.btnHideAuthor);
+
+        btnCloseWork = (Button) this.findViewById(R.id.btnCloseWork);
+        btnShowWork = (Button) this.findViewById(R.id.btnShowWork);
+        btnHideWork = (Button) this.findViewById(R.id.btnHideWork);
     }
 
     private void initListener()
@@ -61,18 +77,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnFullScreenMain.setOnClickListener(this);
         btnMiniatureMain.setOnClickListener(this);
 
-        btnCloseMainAuthor.setOnClickListener(this);
+        btnCloseAuthor.setOnClickListener(this);
+        btnShowAuthor.setOnClickListener(this);
+        btnHideAuthor.setOnClickListener(this);
+
+        btnCloseWork.setOnClickListener(this);
+        btnShowWork.setOnClickListener(this);
+        btnHideWork.setOnClickListener(this);
     }
 
     private void showAllFrameLayout()
     {
         relativeLayoutMain.setVisibility(View.VISIBLE);
         relativeLayoutAuthor.setVisibility(View.VISIBLE);
+        relativeLayoutWork.setVisibility(View.VISIBLE);
     }
 
     private void hideAllFreamLayout()
     {
         relativeLayoutMain.setVisibility(View.GONE);
         relativeLayoutAuthor.setVisibility(View.GONE);
+        relativeLayoutWork.setVisibility(View.GONE);
     }
 }

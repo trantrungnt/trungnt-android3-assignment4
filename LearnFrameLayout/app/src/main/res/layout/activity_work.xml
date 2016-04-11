@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorFrameLayoutWork"
     android:layout_marginTop="@dimen/relative_layout_work_marginTop"
+    android:id="@+id/relativeLayoutWork"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -44,11 +45,11 @@
         android:layout_height="@dimen/button_hide_height" />
 
     <ImageView
-        android:src="@drawable/trungntdev"
+        android:src="@drawable/trungnttechkids"
         android:layout_above="@+id/btnShowWork"
         android:layout_below="@+id/btnMiniature"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/image_view_activity_main_marginBotton"
-        android:layout_width="@dimen/image_view_activity_main_width"
-        android:layout_height="@dimen/image_view_activity_main_height" />
+
+        android:layout_width="@dimen/image_view_activity_work_width"
+        android:layout_height="@dimen/image_view_activity_work_height" />
 </RelativeLayout>

@@ -56,7 +56,7 @@
 
 
         <ImageView
-            android:src="@drawable/trungnttechkids"
+            android:src="@drawable/trungntdev"
             android:layout_above="@+id/btnShowMain"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/btnMiniatureMain"
