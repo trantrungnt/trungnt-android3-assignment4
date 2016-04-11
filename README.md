@@ -11,4 +11,6 @@
 + Bộ công cụ Android Studio 2.0
 + Máy ảo Genymontion và api 18
 
+##Tham khảo
++ [Lấy Icon trên trang web của Design Google](https://design.google.com/icons/#ic_highlight_off)
 
