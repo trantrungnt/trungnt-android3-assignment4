@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayoutAuthor"
-    android:layout_marginTop="@dimen/relalive_layout_author_marginTop"
-    android:background="@color/colorFrameLayoutAuthor"
+    android:background="@color/colorFrameLayoutWork"
+    android:layout_marginTop="@dimen/relative_layout_work_marginTop"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btnCloseAuthor"
+        android:id="@+id/btnCloseWork"
         android:background="@drawable/close"
         android:layout_alignParentRight="true"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height" />
 
     <Button
-        android:id="@+id/btnFullscreenAuthor"
+        android:id="@+id/btnFullscreenWork"
         android:background="@drawable/fullscreen"
-        android:layout_toLeftOf="@+id/btnCloseAuthor"
+        android:layout_toLeftOf="@+id/btnCloseWork"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height" />
 
     <Button
-        android:id="@+id/btnMiniatureAuthor"
+        android:id="@+id/btnMiniature"
         android:background="@drawable/miniature"
-        android:layout_toLeftOf="@+id/btnFullscreenAuthor"
+        android:layout_toLeftOf="@+id/btnFullscreenWork"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height" />
 
     <Button
-        android:id="@+id/btnShowAuthor"
+        android:id="@+id/btnShowWork"
         android:layout_alignParentBottom="true"
         android:text="@string/label_button_show"
         android:layout_marginLeft="@dimen/button_show_marginLeft"
@@ -37,18 +35,18 @@
         android:layout_height="@dimen/button_show_heigth" />
 
     <Button
-        android:id="@+id/btnHide"
+        android:id="@+id/btnHideWork"
         android:text="@string/label_button_hide"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/btnShowAuthor"
+        android:layout_toRightOf="@+id/btnShowWork"
         android:layout_marginLeft="@dimen/button_hide_marginLeft"
         android:layout_width="@dimen/button_hide_width"
         android:layout_height="@dimen/button_hide_height" />
 
     <ImageView
-        android:src="@drawable/trungnt"
-        android:layout_above="@+id/btnShowAuthor"
-        android:layout_below="@+id/btnMiniatureAuthor"
+        android:src="@drawable/trungntdev"
+        android:layout_above="@+id/btnShowWork"
+        android:layout_below="@+id/btnMiniature"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/image_view_activity_main_marginBotton"
         android:layout_width="@dimen/image_view_activity_main_width"

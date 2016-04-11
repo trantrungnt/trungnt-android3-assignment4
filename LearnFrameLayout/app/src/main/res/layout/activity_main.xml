@@ -66,8 +66,7 @@
         />
     </RelativeLayout>
 
-    <include layout="@layout/activity_author">
-
-    </include>
+    <include layout="@layout/activity_author" />
+    <include layout="@layout/activity_work" />
 </FrameLayout>
 
