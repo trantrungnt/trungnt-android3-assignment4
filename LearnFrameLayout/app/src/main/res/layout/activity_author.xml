@@ -22,11 +22,26 @@
             android:layout_height="@dimen/button_height" />
 
         <Button
+            android:id="@+id/btnFullscreen"
+            android:background="@drawable/fullscreen"
+            android:layout_toLeftOf="@+id/btnClose"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
+
+        <Button
+            android:id="@+id/btnMiniature"
+            android:background="@drawable/miniature"
+            android:layout_toLeftOf="@+id/btnFullscreen"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
+
+        <Button
             android:id="@+id/btnShow"
             android:layout_alignParentBottom="true"
             android:text="@string/label_button_show"
             android:layout_width="@dimen/button_show_width"
             android:layout_height="@dimen/button_show_heigth" />
+
         <Button
             android:id="@+id/btnHide"
             android:text="@string/label_button_hide"
@@ -35,6 +50,7 @@
             android:layout_marginLeft="@dimen/button_hide_marginLeft"
             android:layout_width="@dimen/button_hide_width"
             android:layout_height="@dimen/button_hide_height" />
+
         <ImageView
             android:src="@drawable/trungnt"
             android:layout_above="@+id/btnShow"
