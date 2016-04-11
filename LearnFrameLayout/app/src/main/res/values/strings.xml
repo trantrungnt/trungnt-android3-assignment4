@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Learn FrameLayout</string>
+    <string name="label_button_show">Show</string>
 </resources>

@@ -15,4 +15,9 @@
         android:layout_gravity="end"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height" />
+    <Button
+        android:id="@+id/btnShow"
+        android:text="@string/label_button_show"
+        android:layout_width="@dimen/button_show_width"
+        android:layout_height="@dimen/button_show_heigth" />
 </FrameLayout>
