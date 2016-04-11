@@ -55,6 +55,7 @@
         <ImageView
             android:src="@drawable/trungnt"
             android:layout_above="@+id/btnShow"
+            android:layout_below="@+id/btnMiniature"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/image_view_activity_main_marginBotton"
             android:layout_width="@dimen/image_view_activity_main_width"
