@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showAllFrameLayout()
     {
-        //intentOpenAuthor = new Intent(MainActivity.this, AuthorActivity.class);
-        //startActivity(intentOpenAuthor);
+        intentOpenAuthor = new Intent(MainActivity.this, AuthorActivity.class);
+        startActivity(intentOpenAuthor);
 
         intentOpenWork = new Intent(this, WorkActivity.class);
         startActivity(intentOpenWork);
