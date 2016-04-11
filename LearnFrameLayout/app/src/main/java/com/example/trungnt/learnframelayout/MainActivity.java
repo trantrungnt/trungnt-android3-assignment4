@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
 
         if (id == R.id.btnCloseMain)
-                            relativeLayoutMain.setEnabled(false);
+                            relativeLayoutMain.setVisibility(View.GONE);
 
         if (id == R.id.btnShowMain)
                             showAllFrameLayout();
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             hideAllFreamLayout();
 
         if (id ==R.id.btnCloseAuthor)
-                            relativeLayoutAuthor.setEnabled(false);
+                            relativeLayoutAuthor.setVisibility(View.GONE);
     }
 
     //dinh nghia phuong thuc khoi tao ViewMainActivity
@@ -66,13 +66,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void showAllFrameLayout()
     {
-        relativeLayoutMain.setEnabled(true);
-        relativeLayoutAuthor.setEnabled(true);
+        relativeLayoutMain.setVisibility(View.VISIBLE);
+        relativeLayoutAuthor.setVisibility(View.VISIBLE);
     }
 
     private void hideAllFreamLayout()
     {
-        relativeLayoutMain.setEnabled(false);
-        relativeLayoutAuthor.setEnabled(false);
+        relativeLayoutMain.setVisibility(View.GONE);
+        relativeLayoutAuthor.setVisibility(View.GONE);
     }
 }
