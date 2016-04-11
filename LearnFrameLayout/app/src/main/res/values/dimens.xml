@@ -22,4 +22,10 @@
     <dimen name="button_show_marginLeft">30dp</dimen>
     <dimen name="image_view_activity_work_width">300dp</dimen>
     <dimen name="image_view_activity_work_height">450dp</dimen>
+    <dimen name="frame_layout_main_height">400dp</dimen>
+    <dimen name="button_btnShowGlobal_width">150dp</dimen>
+    <dimen name="button_btnShowGlobal_height">50dp</dimen>
+    <dimen name="button_btnHideGlobal_width">150dp</dimen>
+    <dimen name="button_btnHideGlobal_height">50dp</dimen>
+    <dimen name="button_btnHideGlobal_marginLeft">50dp</dimen>
 </resources>

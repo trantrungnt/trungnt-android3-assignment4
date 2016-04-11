@@ -1,72 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayoutMain"
-    android:layout_width="@dimen/frame_layout_width"
-    android:layout_height="@dimen/frame_layout_height"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:layout_below="@+id/frameLayoutAuthor"
     tools:context="com.example.trungnt.learnframelayout.MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayoutMain"
-        android:background="@color/colorRelativeLayoutMain"
+    <LinearLayout
+        android:id="@+id/linearLayoutButtonMain"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/btnCloseMain"
-            android:background="@drawable/close"
-            android:layout_alignParentRight="true"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height" />
-
-        <Button
-            android:id="@+id/btnFullscreenMain"
-            android:background="@drawable/fullscreen"
-            android:layout_toLeftOf="@+id/btnCloseMain"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height" />
-
-        <Button
-            android:id="@+id/btnMiniatureMain"
-            android:background="@drawable/miniature"
-            android:layout_toLeftOf="@+id/btnFullscreenMain"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height" />
-
-        <Button
-            android:id="@+id/btnShowMain"
-            android:layout_alignParentBottom="true"
+            android:id="@+id/btnShowGlobal"
             android:text="@string/label_button_show"
-            android:layout_width="@dimen/button_show_width"
-            android:layout_height="@dimen/button_show_heigth" />
-
+            android:layout_width="@dimen/button_btnShowGlobal_width"
+            android:layout_height="@dimen/button_btnShowGlobal_height" />
         <Button
-            android:id="@+id/btnHideMain"
+            android:id="@+id/btnHideGlobal"
             android:text="@string/label_button_hide"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/btnShowMain"
-            android:layout_marginLeft="@dimen/button_hide_marginLeft"
-            android:layout_width="@dimen/button_hide_width"
-            android:layout_height="@dimen/button_hide_height" />
+            android:layout_marginLeft="@dimen/button_btnHideGlobal_marginLeft"
+            android:layout_width="@dimen/button_btnShowGlobal_width"
+            android:layout_height="@dimen/button_btnHideGlobal_height" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frame_layout_main_height">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutMain"
+            android:background="@color/colorRelativeLayoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnCloseMain"
+                android:background="@drawable/close"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height" />
+
+            <Button
+                android:id="@+id/btnFullscreenMain"
+                android:background="@drawable/fullscreen"
+                android:layout_toLeftOf="@+id/btnCloseMain"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height" />
+
+            <Button
+                android:id="@+id/btnMiniatureMain"
+                android:background="@drawable/miniature"
+                android:layout_toLeftOf="@+id/btnFullscreenMain"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height" />
+
+            <Button
+                android:id="@+id/btnShowMain"
+                android:layout_alignParentBottom="true"
+                android:text="@string/label_button_show"
+                android:layout_width="@dimen/button_show_width"
+                android:layout_height="@dimen/button_show_heigth" />
+
+            <Button
+                android:id="@+id/btnHideMain"
+                android:text="@string/label_button_hide"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/btnShowMain"
+                android:layout_marginLeft="@dimen/button_hide_marginLeft"
+                android:layout_width="@dimen/button_hide_width"
+                android:layout_height="@dimen/button_hide_height" />
 
 
-        <ImageView
-            android:src="@drawable/trungntdev"
-            android:layout_above="@+id/btnShowMain"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/btnMiniatureMain"
-            android:layout_marginBottom="@dimen/image_view_activity_main_marginBotton"
-            android:layout_width="@dimen/image_view_activity_main_width"
-            android:layout_height="@dimen/image_view_activity_main_height"
-        />
-    </RelativeLayout>
+            <ImageView
+                android:src="@drawable/trungntdev"
+                android:layout_above="@+id/btnShowMain"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/btnMiniatureMain"
+                android:layout_marginBottom="@dimen/image_view_activity_main_marginBotton"
+                android:layout_width="@dimen/image_view_activity_main_width"
+                android:layout_height="@dimen/image_view_activity_main_height"
+                />
+        </RelativeLayout>
 
-    <include layout="@layout/activity_author" />
-    <include layout="@layout/activity_work" />
-</FrameLayout>
+        <include layout="@layout/activity_author" />
+        <include layout="@layout/activity_work" />
+    </FrameLayout>
+
+
+</RelativeLayout>
+
+
+
 
