@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnShowMain, btnHideMain, btnCloseMain, btnFullScreenMain, btnMiniatureMain;
     private Button btnCloseAuthor, btnCloseWork, btnShowWork, btnHideWork, btnShowAuthor, btnHideAuthor;
+    private Button btnShowGlobal, btnHideGlobal;
     private RelativeLayout relativeLayoutMain, relativeLayoutAuthor, relativeLayoutWork;
 
     @Override
@@ -30,13 +31,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (id == R.id.btnShowMain ||
             id == R.id.btnShowAuthor ||
-            id == R.id.btnShowWork
+            id == R.id.btnShowWork ||
+            id == R.id.btnShowGlobal
            )
                             showAllFrameLayout();
 
         if (id == R.id.btnHideMain ||
             id == R.id.btnHideAuthor ||
-            id == R.id.btnHideWork
+            id == R.id.btnHideWork ||
+            id == R.id.btnHideGlobal
            )
                             hideAllFreamLayout();
 
@@ -67,6 +70,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCloseWork = (Button) this.findViewById(R.id.btnCloseWork);
         btnShowWork = (Button) this.findViewById(R.id.btnShowWork);
         btnHideWork = (Button) this.findViewById(R.id.btnHideWork);
+
+        btnShowGlobal = (Button) this.findViewById(R.id.btnShowGlobal);
+        btnHideGlobal = (Button) this.findViewById(R.id.btnHideGlobal);
     }
 
     private void initListener()
@@ -84,6 +90,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCloseWork.setOnClickListener(this);
         btnShowWork.setOnClickListener(this);
         btnHideWork.setOnClickListener(this);
+
+        btnShowGlobal.setOnClickListener(this);
+        btnHideGlobal.setOnClickListener(this);
     }
 
     private void showAllFrameLayout()
