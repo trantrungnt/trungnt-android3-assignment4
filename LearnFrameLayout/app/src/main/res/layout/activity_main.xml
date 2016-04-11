@@ -22,9 +22,16 @@
             android:layout_height="@dimen/button_height" />
 
         <Button
-            android:id="@+id/fullscreen"
+            android:id="@+id/btnFullscreen"
             android:background="@drawable/fullscreen"
             android:layout_toLeftOf="@+id/btnClose"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height" />
+
+        <Button
+            android:id="@+id/btnMiniature"
+            android:background="@drawable/miniature"
+            android:layout_toLeftOf="@+id/btnFullscreen"
             android:layout_width="@dimen/button_width"
             android:layout_height="@dimen/button_height" />
 
