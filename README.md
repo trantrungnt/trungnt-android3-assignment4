@@ -8,6 +8,7 @@
 
 ##Demo kết quả bài tập
 + [Xem tại đây](https://youtu.be/5Y-sdpwl3Bo)
++ [Bản demo đã fix lại giao diện Main và thêm 2 nút Show và Hide ở màn hình chính](https://youtu.be/8qQ1pI3r0_0)
 
 ##Môi trường phát triển
 + Hệ điều hành Android version 4.3
