@@ -10,4 +10,7 @@
     <dimen name="button_hide_width">150dp</dimen>
     <dimen name="button_hide_height">50dp</dimen>
     <dimen name="button_hide_marginLeft">50dp</dimen>
+    <dimen name="image_view_activity_main_width">300dp</dimen>
+    <dimen name="image_view_activity_main_height">350dp</dimen>
+    <dimen name="image_view_activity_main_marginBotton">30dp</dimen>
 </resources>

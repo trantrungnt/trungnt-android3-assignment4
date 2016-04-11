@@ -33,5 +33,12 @@
             android:layout_marginLeft="@dimen/button_hide_marginLeft"
             android:layout_width="@dimen/button_hide_width"
             android:layout_height="@dimen/button_hide_height" />
+        <ImageView
+            android:src="@drawable/trungnttechkids"
+            android:layout_above="@+id/btnShow"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/image_view_activity_main_marginBotton"
+            android:layout_width="@dimen/image_view_activity_main_width"
+            android:layout_height="@dimen/image_view_activity_main_height" />
     </RelativeLayout>
 </FrameLayout>
