@@ -18,4 +18,5 @@
 ##Tham khảo
 + [Lấy Icon trên trang web của Design Google](https://design.google.com/icons/#ic_highlight_off)
 + [Creating layout programmatically layoutparams](http://startandroid.ru/en/lessons/complete-list/220-lesson-16-creating-layout-programmatically-layoutparams.html)
-+ [Adroid adding simple animations while setvisibilityview gone](http://stackoverflow.com/questions/22454839/android-adding-simple-animations-while-setvisibilityview-gone)
++ [Android adding simple animations while setvisibilityview gone](http://stackoverflow.com/questions/22454839/android-adding-simple-animations-while-setvisibilityview-gone)
++ [Tổng hợp các cách sử dụng Amination trên 1 view ](http://android.vn/threads/tong-hop-cac-cach-su-dung-animation-tren-mot-view.25929/)
