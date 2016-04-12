@@ -21,3 +21,5 @@
 + [Android adding simple animations while setvisibilityview gone](http://stackoverflow.com/questions/22454839/android-adding-simple-animations-while-setvisibilityview-gone)
 + [Tổng hợp các cách sử dụng Amination trên 1 view ](http://android.vn/threads/tong-hop-cac-cach-su-dung-animation-tren-mot-view.25929/)
 + [slide up /down translate](http://iserveandroid.blogspot.com/2010/12/slide-up-down-translate.html)
++ [Android working with xml animation](http://www.androidhive.info/2013/06/android-working-with-xml-animations/)
++ [Android adding simple animations while set visibility view gone](https://www.codementor.io/tips/7812274333/android-adding-simple-animations-while-setvisibility-view-gone)
