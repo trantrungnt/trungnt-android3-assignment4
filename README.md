@@ -17,4 +17,5 @@
 
 ##Tham khảo
 + [Lấy Icon trên trang web của Design Google](https://design.google.com/icons/#ic_highlight_off)
++ [Creating layout programmatically layoutparams](http://startandroid.ru/en/lessons/complete-list/220-lesson-16-creating-layout-programmatically-layoutparams.html)
 
