@@ -23,3 +23,4 @@
 + [slide up /down translate](http://iserveandroid.blogspot.com/2010/12/slide-up-down-translate.html)
 + [Android working with xml animation](http://www.androidhive.info/2013/06/android-working-with-xml-animations/)
 + [Android adding simple animations while set visibility view gone](https://www.codementor.io/tips/7812274333/android-adding-simple-animations-while-setvisibility-view-gone)
++ [Simple Android animation on view gone visible](https://colinyeoh.wordpress.com/2012/10/07/simple-android-animation-on-view-gonevisible/)
