@@ -1,5 +1,6 @@
 package com.example.trungnt.learnframelayout;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
     private Button btnShowMain, btnHideMain, btnCloseMain, btnFullScreenMain, btnMiniatureMain;
     private Button btnCloseAuthor, btnCloseWork, btnShowWork, btnHideWork, btnShowAuthor, btnHideAuthor;
     private Button btnShowGlobal, btnHideGlobal;
