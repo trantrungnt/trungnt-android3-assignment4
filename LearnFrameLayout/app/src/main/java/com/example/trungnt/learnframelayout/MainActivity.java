@@ -1,5 +1,6 @@
 package com.example.trungnt.learnframelayout;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnCloseAuthor, btnCloseWork, btnShowWork, btnHideWork, btnShowAuthor, btnHideAuthor;
     private Button btnShowGlobal, btnHideGlobal;
     private RelativeLayout relativeLayoutMain, relativeLayoutAuthor, relativeLayoutWork;
+    private Animation bound, slideUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +30,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         int id = v.getId();
 
-        if (id == R.id.btnCloseMain)
-                            relativeLayoutMain.setVisibility(View.GONE);
+        if (id == R.id.btnCloseMain) {
+            relativeLayoutMain.setVisibility(View.GONE);
+            relativeLayoutMain.animate().translationY(v.getHeight()).alpha(0.0f).setDuration(300);
+            relativeLayoutMain.startAnimation(slideUp);
+        }
 
         if (id == R.id.btnShowMain ||
             id == R.id.btnShowAuthor ||
@@ -75,6 +80,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnShowGlobal = (Button) this.findViewById(R.id.btnShowGlobal);
         btnHideGlobal = (Button) this.findViewById(R.id.btnHideGlobal);
+        bound = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bound);
+        slideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
     }
 
     private void initListener()
