@@ -56,7 +56,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         {
             //imgViewMain.animate().translationY(v.getHeight()).alpha(0.0f).setDuration(10000);
 
-            zoomOut.setAnimationListener(new Animation.AnimationListener() {
+            /*zoomOut.setAnimationListener(new Animation.AnimationListener() {
                 @Override
                 public void onAnimationStart(Animation animation) {
 
@@ -72,7 +72,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 public void onAnimationRepeat(Animation animation) {
 
                 }
-            });
+            });*/
             imgViewMain.startAnimation(zoomOut);
         }
 
@@ -139,6 +139,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         zoomIn.setDuration(1000);
         zoomIn.setFillAfter(true);
         //zoomIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in);
+
+        zoomOut = new ScaleAnimation(0.0f, 1.0f, 0.5f, 1.0f);
+        zoomOut.setDuration(1000);
+        zoomOut.setFillAfter(true);
 
         imgViewMain = (ImageView) this.findViewById(R.id.imgViewMain);
     }
