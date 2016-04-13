@@ -2,4 +2,6 @@
     <string name="app_name">Learn FrameLayout</string>
     <string name="label_button_show">Show</string>
     <string name="label_button_hide">Hide</string>
+    <string name="label_button_zoom_out">Zoom out</string>
+    <string name="label_button_zoom_in">Zoom in</string>
 </resources>

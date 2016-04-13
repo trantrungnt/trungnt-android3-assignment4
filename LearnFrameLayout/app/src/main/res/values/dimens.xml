@@ -28,4 +28,10 @@
     <dimen name="button_btnHideGlobal_width">150dp</dimen>
     <dimen name="button_btnHideGlobal_height">50dp</dimen>
     <dimen name="button_btnHideGlobal_marginLeft">50dp</dimen>
+    <dimen name="button_zoom_out_width">150dp</dimen>
+    <dimen name="button_zoom_out_heigth">50dp</dimen>
+    <dimen name="button_zoom_out_marginTop">350dp</dimen>
+    <dimen name="button_zoom_in_width">150dp</dimen>
+    <dimen name="button_zoom_in_height">50dp</dimen>
+    <dimen name="button_zoom_in_marginLeft">20dp</dimen>
 </resources>
