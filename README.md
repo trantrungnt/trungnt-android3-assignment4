@@ -58,3 +58,4 @@ Sau đó, ta sử dụng chức năng ZoomOut với ImageView ảnh imgViewMain
 + [Simple Android animation on view gone visible](https://colinyeoh.wordpress.com/2012/10/07/simple-android-animation-on-view-gonevisible/)
 + [Create relative layout programmatically android example](http://www.android-examples.com/create-relativelayout-programmatically-android-example/)
 + [Add margin programatically to relativelayout what is doing wrong](http://stackoverflow.com/questions/18844418/add-margin-programatically-to-relativelayout-what-im-doing-wrong)
++ [Layouts in Android](https://duythanhcse.wordpress.com/2013/04/01/bai-tap-7-lam-quen-voi-cac-layout-trong-android/)
