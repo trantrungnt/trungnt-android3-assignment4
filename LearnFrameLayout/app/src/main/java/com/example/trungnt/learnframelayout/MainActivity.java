@@ -13,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -21,7 +22,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button btnZoomOut, btnZoomIn, btnCloseMain, btnFullScreenMain, btnMiniatureMain;
     private Button btnCloseAuthor, btnCloseWork, btnShowWork, btnHideWork, btnShowAuthor, btnHideAuthor;
     private Button btnShowGlobal, btnHideGlobal;
-    private RelativeLayout relativeLayoutMain, relativeLayoutAuthor, relativeLayoutWork, retMain;
+    private RelativeLayout relativeLayoutMain, relativeLayoutAuthor, relativeLayoutWork, relMain;
     private Animation bound, slideUp, slideDown, zoomOut, zoomIn;
     private ImageView imgViewMain;
 
@@ -46,10 +47,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
             //relativeParams.setMargins(0, 0, 0, 0);
 //            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(relativeLayoutAuthor.getLayoutParams().MATCH_PARENT,
 //                    relativeLayoutAuthor.getLayoutParams().MATCH_PARENT);
-//            params.topMargin = 0;
-//            retMain.setLayoutParams(params);
-//            retMain.requestLayout();
+            //params.topMargin = 0;
+//            relativeLayoutAuthor.setLayoutParams(params);
+//            relativeLayoutAuthor.requestLayout();
 
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) relativeLayoutAuthor.getLayoutParams();
+            params.topMargin = 0;
+            relMain.setLayoutParams(params);
+            relMain.requestLayout();
         }
 
         if (id == R.id.btnZoomOut)
@@ -118,7 +123,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         relativeLayoutMain = (RelativeLayout) this.findViewById(R.id.relativeLayoutMain);
         relativeLayoutAuthor = (RelativeLayout) this.findViewById(R.id.relativeLayoutAuthor);
         relativeLayoutWork = (RelativeLayout) this.findViewById(R.id.relativeLayoutWork);
-        retMain = (RelativeLayout) this.findViewById(R.id.retMain);
+        relMain = (RelativeLayout) this.findViewById(R.id.relMain);
 
         btnCloseAuthor = (Button) this.findViewById(R.id.btnCloseAuthor);
         btnShowAuthor = (Button) this.findViewById(R.id.btnShowAuthor);
