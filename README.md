@@ -19,6 +19,29 @@ FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) relativeLayoutAutho
             relMain.requestLayout();
 ```
 
++ Dùng Animation ZoomIn và ZoomOut cho ImageView ảnh: imgViewMain (có 2 cách: định nghĩa animation trong file zoomIn.zml, zoomOut.xml hoặc dùng cách code java trực tiếp). Ở đây, ta code Java trực tiếp 2 chức năng ZoomIn và ZoomOut. Tôi muốn sau khi ZoomOut hoặc ZoomIn xong thì Ảnh vẫn lưu lại và hiển thị cho người dùng. Nếu để 2 thuộc tính pivotX, pivotY thì ảnh ZoomOut hoặc ZoomIn xong thì ảnh sẽ từ từ biến mất
+Với ZoomIn:
+```
+        zoomIn = new ScaleAnimation(1.0f, 0.5f, 1.0f, 0.5f);
+        zoomIn.setDuration(1000);
+        zoomIn.setFillAfter(true);
+```
+Sau đó, ta sử dụng chức năng ZoomIn với ImageView ảnh imgViewMain
+```
+      imgViewMain.startAnimation(zoomIn);
+```
+
+Với ZoomOut
+```
+        zoomOut = new ScaleAnimation(0.0f, 1.0f, 0.5f, 1.0f);
+        zoomOut.setDuration(1000);
+        zoomOut.setFillAfter(true);
+```
+Sau đó, ta sử dụng chức năng ZoomOut với ImageView ảnh imgViewMain
+```
+      imgViewMain.startAnimation(zoomOut);
+```
+
 ##Môi trường phát triển
 + Hệ điều hành Android version 4.3
 + Bộ công cụ Android Studio 2.0
