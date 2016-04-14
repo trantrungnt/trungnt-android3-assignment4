@@ -34,4 +34,6 @@
     <dimen name="button_zoom_in_width">150dp</dimen>
     <dimen name="button_zoom_in_height">50dp</dimen>
     <dimen name="button_zoom_in_marginLeft">20dp</dimen>
+    <dimen name="relative_layout_main_marginTop">16dp</dimen>
+    <dimen name="frame_layout_marginTop">0dp</dimen>
 </resources>

@@ -41,43 +41,24 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         if (id == R.id.btnCloseMain) {
             relativeLayoutMain.setVisibility(View.GONE);
-            //relativeLayoutAuthor.getLayoutParams();
-            //RelativeLayout.LayoutParams relativeParams = (RelativeLayout.LayoutParams)relativeLayoutAuthor.getLayoutParams();
-            //relativeParams.topMargin=0;
-            //relativeParams.setMargins(0, 0, 0, 0);
-//            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(relativeLayoutAuthor.getLayoutParams().MATCH_PARENT,
-//                    relativeLayoutAuthor.getLayoutParams().MATCH_PARENT);
-            //params.topMargin = 0;
-//            relativeLayoutAuthor.setLayoutParams(params);
-//            relativeLayoutAuthor.requestLayout();
 
-            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) relativeLayoutAuthor.getLayoutParams();
-            params.topMargin = 0;
-            relMain.setLayoutParams(params);
+            //thay doi gia tri MarginTop cua RelativeAuthor
+            FrameLayout.LayoutParams paramsForRelLayoutAuthor = (FrameLayout.LayoutParams) relativeLayoutAuthor.getLayoutParams();
+            paramsForRelLayoutAuthor.topMargin = 16;
+            relMain.setLayoutParams(paramsForRelLayoutAuthor);
+
+            //thay doi gia tri MarginTop cua RelativeWork
+            FrameLayout.LayoutParams paramsForRelLayoutWork =  (FrameLayout.LayoutParams) relativeLayoutWork.getLayoutParams();
+            paramsForRelLayoutWork.topMargin = 16;
+            relMain.setLayoutParams(paramsForRelLayoutWork);
+
+            //thay doi gia tri da thay doi qua code java that su tren giao dien activity_zml co san
             relMain.requestLayout();
+
         }
 
         if (id == R.id.btnZoomOut)
         {
-            //imgViewMain.animate().translationY(v.getHeight()).alpha(0.0f).setDuration(10000);
-
-            /*zoomOut.setAnimationListener(new Animation.AnimationListener() {
-                @Override
-                public void onAnimationStart(Animation animation) {
-
-
-                }
-
-                @Override
-                public void onAnimationEnd(Animation animation) {
-                    imgViewMain.setVisibility(View.VISIBLE);
-                }
-
-                @Override
-                public void onAnimationRepeat(Animation animation) {
-
-                }
-            });*/
             imgViewMain.startAnimation(zoomOut);
         }
 
@@ -100,14 +81,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         if (id == R.id.btnCloseAuthor) {
             relativeLayoutAuthor.setVisibility(View.GONE);
-            //relativeLayoutAuthor.animate().translationY(v.getHeight()).alpha(0.0f).setDuration(300);
-            //relativeLayoutAuthor.startAnimation(slideUp);
+            FrameLayout.LayoutParams paramsrelLayoutWork  = (FrameLayout.LayoutParams) relativeLayoutWork.getLayoutParams();
+            paramsrelLayoutWork.topMargin=160;
+            relMain.setLayoutParams(paramsrelLayoutWork);
         }
 
         if (id == R.id.btnCloseWork) {
             relativeLayoutWork.setVisibility(View.GONE);
-            //relativeLayoutWork.animate().translationY(v.getHeight()).alpha(0.0f).setDuration(300);
-            //relativeLayoutWork.startAnimation(slideUp);
         }
     }
 
