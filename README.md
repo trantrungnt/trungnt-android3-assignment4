@@ -13,7 +13,7 @@
 ##Chú ý khi code
 + Ta có giao diện xml có sẵn gồm: relativeLayout bao ngoài LinearLayout (dùng cho nút Show và nút Hide), 1 FrameLayout và 1 RelativeMain. Trong FrameLayout có chứa 2 Relative: relativeAuthor, relativeWork. Để tác động thay đổi giá trị MarginTop của relativeAuthor trong FrameLayout, ta làm như sau:
 ```
-FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) relativeLayoutAuthor.getLayoutParams();
+            FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) relativeLayoutAuthor.getLayoutParams();
             params.topMargin = 0;
             relMain.setLayoutParams(params);
             relMain.requestLayout();
