@@ -37,10 +37,13 @@
 
         <include
             android:id = "@+id/layoutAbout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             layout="@layout/acitivity_about"/>
 
         <include
             android:id="@+id/layoutAuthor"
+
             layout="@layout/activity_author" />
 
         <include

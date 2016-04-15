@@ -23,6 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button btnCloseAuthor, btnCloseWork, btnShowWork, btnHideWork, btnShowAuthor, btnHideAuthor;
     private Button btnShowGlobal, btnHideGlobal;
     private RelativeLayout relLayoutAbout, reLayoutAuthor, reLayoutWork;
+    private FrameLayout.LayoutParams paraReLayoutAbout, paraReLayoutAuthor, paraReLayoutWork;
     private Animation bound, slideUp, slideDown, zoomOut, zoomIn;
     private ImageView imgViewMain;
 
@@ -40,8 +41,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         int id = v.getId();
 
         if (id == R.id.btnCloseMain) {
-
-
+            relLayoutAbout.setVisibility(View.GONE);
+            changeLocationLayout(relLayoutAbout);
         }
 
         if (id == R.id.btnZoomOut)
@@ -67,11 +68,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             hideAllFrameLayout();
 
         if (id == R.id.btnCloseAuthor) {
-
+            reLayoutAuthor.setVisibility(View.GONE);
+            changeLocationLayout(reLayoutAuthor);
         }
 
         if (id == R.id.btnCloseWork) {
-
+            reLayoutWork.setVisibility(View.GONE);
         }
     }
 
@@ -121,6 +123,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         relLayoutAbout = (RelativeLayout) this.findViewById(R.id.layoutAbout);
         reLayoutAuthor = (RelativeLayout) this.findViewById(R.id.layoutAuthor);
         reLayoutWork = (RelativeLayout) this.findViewById(R.id.layoutWork);
+
+        //lay Layout Param cua tung giao dien About, Author, Work do FrameLayout quan ly
+        paraReLayoutAbout = (FrameLayout.LayoutParams) relLayoutAbout.getLayoutParams();
+        paraReLayoutAuthor = (FrameLayout.LayoutParams) reLayoutAuthor.getLayoutParams();
+        paraReLayoutWork = (FrameLayout.LayoutParams) reLayoutWork.getLayoutParams();
     }
 
     private void initListener()
@@ -158,6 +165,25 @@ public class MainActivity extends Activity implements View.OnClickListener {
         reLayoutWork.setVisibility(View.GONE);
     }
 
+    //dinh nghia viec thay doi margin cua 3 Layout Author, About, Work
+    private void changeLocationLayout(RelativeLayout layout)
+    {
+        if (layout == reLayoutAuthor)
+        {
+            //khi vung mau Vang bi dong thi vung mau Do se chua vung mau Vang => reLayoutWork se chinh theo tham so cua LayoutAuthor
+            reLayoutWork.setLayoutParams(paraReLayoutAuthor);
+        }
 
+        if (layout == relLayoutAbout)
+        {
+            //thay doi gia tri tham so margin cua Author theo LayoutAbout
+            reLayoutAuthor.setLayoutParams(paraReLayoutAbout);
+
+            //thay doi gia tri tham so margin cua Work theo LayoutAuthor
+            reLayoutWork.setLayoutParams(paraReLayoutAuthor);
+        }
+
+    }
 
 }
+
