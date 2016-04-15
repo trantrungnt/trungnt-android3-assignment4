@@ -56,6 +56,8 @@ Code mới:
 
 ```
 
++ Hiện ta, do view bị cộng thêm margin của view vừa bị ẩn đi => set lại margin cho view mới 
+
 ##Môi trường phát triển
 + Hệ điều hành Android version 4.3
 + Bộ công cụ Android Studio 2.0
