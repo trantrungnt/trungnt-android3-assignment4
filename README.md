@@ -42,6 +42,20 @@ Sau đó, ta sử dụng chức năng ZoomOut với ImageView ảnh imgViewMain
       imgViewMain.startAnimation(zoomOut);
 ```
 
++ PivotX, pivotY: định nghĩa toạ độ start của View mà ta muốn thực hiện animation. Nếu để 0 có nghĩa start từ top/left; nếu để 50% tức là start từ chính giữa. Chú ý: 50% thì là chính giữa của view, 50%p thì là chính giữa của view cha.
+Cái đoạn code mà animation xong thì view biến mất là do ta đang để pivotXType và pivotType = ABSOLUTE:
+
+Code cũ: 
+```
+   zoomIn = new ScaleAnimation(1.0f, 0.5f, 1.0f, 0.5f, Animation.ABSOLUTE, 0, Animation.ABSOLUTE, 0);
+```
+
+Code mới:
+```
+   zoomIn = new ScaleAnimation(1.0f, 0.5f, 1.0f, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+
+```
+
 ##Môi trường phát triển
 + Hệ điều hành Android version 4.3
 + Bộ công cụ Android Studio 2.0
