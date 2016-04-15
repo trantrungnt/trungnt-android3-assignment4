@@ -120,9 +120,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         slideDown = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
         //zoomIn = AnimationUtils.loadAnimation(this, R.anim.zoom_out);
         //zoomIn = new ScaleAnimation(1.0f, 0.5f, 1.0f, 0.5f, Animation.ABSOLUTE, 0, Animation.ABSOLUTE, 0);
-        zoomIn = new ScaleAnimation(1.0f, 0.5f, 1.0f, 0.5f);
+//        zoomIn = new ScaleAnimation(1.0f, 0.5f, 1.0f, 0.5f);
+//        zoomIn.setDuration(1000);
+//        zoomIn.setFillAfter(true);
+
+        zoomIn = new ScaleAnimation(1.0f, 0.5f, 1.0f, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         zoomIn.setDuration(1000);
         zoomIn.setFillAfter(true);
+
         //zoomIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in);
 
         zoomOut = new ScaleAnimation(0.0f, 1.0f, 0.5f, 1.0f);
