@@ -75,3 +75,4 @@ Code mới:
 + [Create relative layout programmatically android example](http://www.android-examples.com/create-relativelayout-programmatically-android-example/)
 + [Add margin programatically to relativelayout what is doing wrong](http://stackoverflow.com/questions/18844418/add-margin-programatically-to-relativelayout-what-im-doing-wrong)
 + [Layouts in Android](https://duythanhcse.wordpress.com/2013/04/01/bai-tap-7-lam-quen-voi-cac-layout-trong-android/)
++ [Set Height and Width of frameLayout based on bitmap](http://stackoverflow.com/questions/12192667/set-height-and-width-of-framelayout-based-on-bitmap)
