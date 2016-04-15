@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/relativeLayoutMain"
+android:background="@color/colorRelativeLayoutMain"
+android:layout_marginTop="@dimen/relative_layout_main_marginTop"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<Button
+    android:id="@+id/btnCloseMain"
+    android:background="@drawable/close"
+    android:layout_alignParentRight="true"
+    android:layout_width="@dimen/button_width"
+    android:layout_height="@dimen/button_height" />
+
+<Button
+    android:id="@+id/btnFullscreenMain"
+    android:background="@drawable/fullscreen"
+    android:layout_toLeftOf="@+id/btnCloseMain"
+    android:layout_width="@dimen/button_width"
+    android:layout_height="@dimen/button_height" />
+
+<Button
+    android:id="@+id/btnMiniatureMain"
+    android:background="@drawable/miniature"
+    android:layout_toLeftOf="@+id/btnFullscreenMain"
+    android:layout_width="@dimen/button_width"
+    android:layout_height="@dimen/button_height" />
+
+<Button
+    android:id="@+id/btnZoomOut"
+    android:layout_alignParentBottom="true"
+    android:text="@string/label_button_zoom_out"
+    android:layout_width="@dimen/button_zoom_out_width"
+    android:layout_height="@dimen/button_zoom_out_heigth" />
+
+<Button
+    android:id="@+id/btnZoomIn"
+    android:text="@string/label_button_zoom_in"
+    android:layout_alignParentBottom="true"
+    android:layout_toRightOf="@+id/btnZoomOut"
+    android:layout_marginLeft="@dimen/button_zoom_in_marginLeft"
+    android:layout_width="@dimen/button_zoom_in_width"
+    android:layout_height="@dimen/button_zoom_in_height" />
+
+
+<ImageView
+    android:id = "@+id/imgViewMain"
+    android:src="@drawable/trungntdev"
+    android:layout_above="@+id/btnZoomOut"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/btnMiniatureMain"
+    android:layout_marginBottom="@dimen/image_view_activity_main_marginBotton"
+    android:layout_width="@dimen/image_view_activity_main_width"
+    android:layout_height="@dimen/image_view_activity_main_height"
+    />
+</RelativeLayout>

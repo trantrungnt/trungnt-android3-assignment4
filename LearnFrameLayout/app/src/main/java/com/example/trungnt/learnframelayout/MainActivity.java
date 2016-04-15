@@ -22,7 +22,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button btnZoomOut, btnZoomIn, btnCloseMain, btnFullScreenMain, btnMiniatureMain;
     private Button btnCloseAuthor, btnCloseWork, btnShowWork, btnHideWork, btnShowAuthor, btnHideAuthor;
     private Button btnShowGlobal, btnHideGlobal;
-    private RelativeLayout relativeLayoutMain, relativeLayoutAuthor, relativeLayoutWork, relMain;
+    private RelativeLayout relLayoutAbout, reLayoutAuthor, reLayoutWork;
     private Animation bound, slideUp, slideDown, zoomOut, zoomIn;
     private ImageView imgViewMain;
 
@@ -40,20 +40,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         int id = v.getId();
 
         if (id == R.id.btnCloseMain) {
-            relativeLayoutMain.setVisibility(View.GONE);
 
-            //thay doi gia tri MarginTop cua RelativeAuthor
-            FrameLayout.LayoutParams paramsForRelLayoutAuthor = (FrameLayout.LayoutParams) relativeLayoutAuthor.getLayoutParams();
-            paramsForRelLayoutAuthor.topMargin = 16;
-            relMain.setLayoutParams(paramsForRelLayoutAuthor);
-
-            //thay doi gia tri MarginTop cua RelativeWork
-            FrameLayout.LayoutParams paramsForRelLayoutWork =  (FrameLayout.LayoutParams) relativeLayoutWork.getLayoutParams();
-            paramsForRelLayoutWork.topMargin = 16;
-            relMain.setLayoutParams(paramsForRelLayoutWork);
-
-            //thay doi gia tri da thay doi qua code java that su tren giao dien activity_zml co san
-            relMain.requestLayout();
 
         }
 
@@ -80,14 +67,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             hideAllFrameLayout();
 
         if (id == R.id.btnCloseAuthor) {
-            relativeLayoutAuthor.setVisibility(View.GONE);
-            FrameLayout.LayoutParams paramsrelLayoutWork  = (FrameLayout.LayoutParams) relativeLayoutWork.getLayoutParams();
-            paramsrelLayoutWork.topMargin=160;
-            relMain.setLayoutParams(paramsrelLayoutWork);
+
         }
 
         if (id == R.id.btnCloseWork) {
-            relativeLayoutWork.setVisibility(View.GONE);
+
         }
     }
 
@@ -100,11 +84,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btnFullScreenMain = (Button) this.findViewById(R.id.btnFullscreenMain);
         btnMiniatureMain = (Button) this.findViewById(R.id.btnMiniatureMain);
 
-        relativeLayoutMain = (RelativeLayout) this.findViewById(R.id.relativeLayoutMain);
-        relativeLayoutAuthor = (RelativeLayout) this.findViewById(R.id.relativeLayoutAuthor);
-        relativeLayoutWork = (RelativeLayout) this.findViewById(R.id.relativeLayoutWork);
-        relMain = (RelativeLayout) this.findViewById(R.id.relMain);
-
         btnCloseAuthor = (Button) this.findViewById(R.id.btnCloseAuthor);
         btnShowAuthor = (Button) this.findViewById(R.id.btnShowAuthor);
         btnHideAuthor = (Button) this.findViewById(R.id.btnHideAuthor);
@@ -115,6 +94,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         btnShowGlobal = (Button) this.findViewById(R.id.btnShowGlobal);
         btnHideGlobal = (Button) this.findViewById(R.id.btnHideGlobal);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         bound = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.bound);
         slideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
         slideDown = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
@@ -135,6 +116,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         zoomOut.setFillAfter(true);
 
         imgViewMain = (ImageView) this.findViewById(R.id.imgViewMain);
+        ////////////////////////////////////////////////////////////////////////////
+        //lay id cua layout tern giao dien Main
+        relLayoutAbout = (RelativeLayout) this.findViewById(R.id.layoutAbout);
+        reLayoutAuthor = (RelativeLayout) this.findViewById(R.id.layoutAuthor);
+        reLayoutWork = (RelativeLayout) this.findViewById(R.id.layoutWork);
     }
 
     private void initListener()
@@ -156,63 +142,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btnShowGlobal.setOnClickListener(this);
         btnHideGlobal.setOnClickListener(this);
         imgViewMain.setOnClickListener(this);
-
     }
 
     private void showAllFrameLayout(View v)
     {
-        relativeLayoutMain.setVisibility(View.VISIBLE);
-        relativeLayoutAuthor.setVisibility(View.VISIBLE);
-        relativeLayoutWork.setVisibility(View.VISIBLE);
-
-        /*relativeLayoutMain.animate().translationY(v.getHeight()).alpha(0.0f).setListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-                super.onAnimationRepeat(animation);
-                relativeLayoutMain.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-                super.onAnimationStart(animation);
-            }
-        });
-        relativeLayoutMain.startAnimation(slideDown);*/
-
-        /*relativeLayoutAuthor.animate().translationY(v.getHeight()).alpha(0.0f).setDuration(30000).setListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-                super.onAnimationRepeat(animation);
-                relativeLayoutAuthor.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAnimationStart(Animator animation) {
-                super.onAnimationStart(animation);
-            }
-        });
-        relativeLayoutAuthor.startAnimation(slideDown);
-
-        relativeLayoutWork.animate().translationY(v.getHeight()).alpha(0.0f).setDuration(30000).setListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-                super.onAnimationRepeat(animation);
-                relativeLayoutWork.setVisibility(View.VISIBLE);
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-            }
-        });
-        relativeLayoutWork.startAnimation(slideDown);*/
+        relLayoutAbout.setVisibility(View.VISIBLE);
+        reLayoutAuthor.setVisibility(View.VISIBLE);
+        reLayoutWork.setVisibility(View.VISIBLE);
     }
 
     private void hideAllFrameLayout()
     {
-        relativeLayoutMain.setVisibility(View.GONE);
-        relativeLayoutAuthor.setVisibility(View.GONE);
-        relativeLayoutWork.setVisibility(View.GONE);
+        relLayoutAbout.setVisibility(View.GONE);
+        reLayoutAuthor.setVisibility(View.GONE);
+        reLayoutWork.setVisibility(View.GONE);
     }
 
 
