@@ -168,20 +168,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
     //dinh nghia viec thay doi margin cua 3 Layout Author, About, Work
     private void changeLocationLayout(RelativeLayout layout)
     {
-        if (layout == reLayoutAuthor)
-        {
-            //khi vung mau Vang bi dong thi vung mau Do se chua vung mau Vang => reLayoutWork se chinh theo tham so cua LayoutAuthor
-            reLayoutWork.setLayoutParams(paraReLayoutAuthor);
+        if (layout == reLayoutAuthor) {
+            if (reLayoutAuthor.getVisibility() == View.VISIBLE && reLayoutWork.getVisibility() == View.VISIBLE)
+                //khi vung mau Vang bi dong thi vung mau Do se chua vung mau Vang => reLayoutWork se chinh theo tham so cua LayoutAuthor
+                reLayoutWork.setLayoutParams(paraReLayoutAuthor);
+            else
+                reLayoutWork.setLayoutParams(paraReLayoutAbout);
+
+            return;
         }
 
-        if (layout == relLayoutAbout)
-        {
-            //thay doi gia tri tham so margin cua Author theo LayoutAbout
-            reLayoutAuthor.setLayoutParams(paraReLayoutAbout);
 
-            //thay doi gia tri tham so margin cua Work theo LayoutAuthor
-            reLayoutWork.setLayoutParams(paraReLayoutAuthor);
-        }
 
     }
 
